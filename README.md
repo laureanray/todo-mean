@@ -39,4 +39,4 @@ You can try this by using cURL, Postman, or Insomnia. (or other http client)
 
 `[PUT] http://localhost:3000/todo/id` update todo using id and (application/json) body
 
-`[DELETE] http://localhost:3000/todo/id`
+`[DELETE] http://localhost:3000/todo/id` delete a todo using id
