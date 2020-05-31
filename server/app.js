@@ -49,7 +49,7 @@ app.use((error, req, res, next) => {
   });
 });
 
-// Seed Database
-// seed();
+// Seed Database (this will seed if theres no data in the database)
+seed();
 
 module.exports = app;

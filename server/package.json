@@ -1,11 +1,10 @@
 {
-  "name": "crud-senti-api-server",
+  "name": "todo-api-server",
   "version": "1.0.0",
-  "description": "A basic CRUD api for senti",
+  "description": "A basic todo REST api which demonstrates basic CRUD functionality",
   "main": "app.js",
   "scripts": {
-    "serve": "cross-env NODE_ENV=dev node server.js",
-    "test": "cross-env NODE_ENV=test mocha **/*.test.js --timeout 5000 || exit 0",
+    "start": "cross-env NODE_ENV=dev node server.js",
     "watch": "nodemon server.js"
   },
   "author": "Laurean Ray Bahala",
@@ -17,10 +16,7 @@
     "mongoose": "^5.9.16"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
     "cross-env": "^7.0.2",
-    "mocha": "^7.2.0",
     "nodemon": "^2.0.4"
   }
 }

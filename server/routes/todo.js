@@ -38,7 +38,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 
-router.post('/create', (req, res, next) => {
+router.post('/', (req, res, next) => {
   const body = req.body;
   const todo = Todo(body);
   todo
@@ -49,9 +49,9 @@ router.post('/create', (req, res, next) => {
       }
     })
     .catch(err => {
-      if (err) {
-        console.log(err);
-      }
+      res.status(500).send({
+        message: 'Internal server error'
+      })
     })
 });
 
@@ -60,11 +60,11 @@ router.put('/:id', (req, res, next) => {
     .then(result => {
       if (result) {
         result.todoText = req.body.todoText;
+        result.isDone = req.body.isDone;
         result
           .save()
           .then(todo => {
             if (todo) {
-              console.log(todo);
               res.send(todo);
             }
           })
@@ -110,6 +110,5 @@ router.delete('/:id', (req, res, next) => {
       }
     });
 });
-
 
 module.exports = router;
