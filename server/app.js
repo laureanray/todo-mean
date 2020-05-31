@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 const todoRoutes = require('./routes/todo');
 const seed = require('./data/seed');
@@ -25,6 +26,7 @@ mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology
 });
 
 // Configuration and Middleware setup
+app.use(cors());
 app.set('port', 3000);
 app.use(bodyParser.json());
 
