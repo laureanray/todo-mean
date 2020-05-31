@@ -4,8 +4,21 @@
   "description": "A basic CRUD api for senti",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test mocha **/*.test.js --timeout 5000 || exit 0",
+    "watch": "nodemon server.js"
   },
   "author": "Laurean Ray Bahala",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.2",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4"
+  }
 }
