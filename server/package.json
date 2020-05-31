@@ -1,0 +1,11 @@
+{
+  "name": "crud-senti-api-server",
+  "version": "1.0.0",
+  "description": "A basic CRUD api for senti",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurean Ray Bahala",
+  "license": "MIT"
+}
