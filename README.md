@@ -19,5 +19,20 @@ Move into the server directory `cd server` and run `npm install` in the **server
 ### Starting 
 Run `npm run start` from the **root** of the project. It should take a while for Angular to build please be patient during this time.
 
-If fore some reason this doesn't work try running the frontend and backend separately by running `npm run serve` in the **root** of the project and then
+If for some reason this doesn't work try running the frontend and backend separately by running `npm run serve` in the **root** of the project and then
 run `npm run serve` in the **server** directory. For more information please check the `package.json` of both the frontend and backend.
+
+### Usage
+#### Client
+Go to [Web App](http://localhost:4200/) or type in `http://localhost:4200` in your browser.
+
+#### Api Endpoints
+`[GET] http://localhost:3000/todo` get all the todos
+
+`[GET] http://localhost:3000/todo/id` get the todo that matches id
+
+`[POST] http://localhost:3000/todo` create todo (application/json) body
+
+`[PUT] http://localhost:3000/todo/id` update todo using id and (application/json) body
+
+`[DELETE] http://localhost:3000/todo/id`
