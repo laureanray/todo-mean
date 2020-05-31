@@ -1,27 +1,23 @@
-# CrudSenti
+# Todo List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+This is a sample project which contains a server which serves as a REST API and an Angular frontend to demonstrate
+usage of the API.
 
-## Development server
+## Requirements
+**Node.js**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**MongoDB**
+## Installing and Running
 
-## Code scaffolding
+Clone this repository then install all the npm packages for both frontend and the backend.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm install` in the **root** of the project for the installing the dependencies of the frontend.
 
-## Build
+Move into the server directory `cd server` and run `npm install` in the **server** directory of the project to install the dependencies of the backend.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Starting 
+Run `npm run start` from the **root** of the project. It should take a while for Angular to build please be patient during this time.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If fore some reason this doesn't work try running the frontend and backend separately by running `npm run serve` in the **root** of the project and then
+run `npm run serve` in the **server** directory. For more information please check the `package.json` of both the frontend and backend.

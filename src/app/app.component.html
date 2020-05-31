@@ -1,23 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-  <a class="navbar-brand" routerLink="/">Todo</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  </div>
-</nav>
-<div class="container">
-  <div class="col">
-    <div class="row">
+<div class="container-small">
+  <div class="row mt-5">
+    <div class="col">
       <h2> Todo </h2>
-      <p> Todo </p>
+      <p>
+        This is a sample client for the todo REST api which demonstrates basic CRUD functionality.
+      </p>
     </div>
   </div>
-  <div class="col">
-    <button mat-raised-button>Add Todo</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
+  <div class="row">
+    <div class="col">
+      <button mat-raised-button color="primary" (click)="addTodo()">Add Todo</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="mt-2">
+        <div class="d-flex todo-item" *ngFor="let todo of todos"  [ngClass]="{ 'done' : todo.isDone }">
+          <div class="flex-grow-1" (click)="toggleDone(todo._id)">
+            <h2 class="mat-h2">
+               <del *ngIf="todo.isDone; else not">
+                 {{todo.todoText}}
+               </del>
+              <ng-template #not>
+                {{todo.todoText}}
+              </ng-template>
+            </h2>
+          </div>
+          <div class=" text-right">
+            <button mat-raised-button class="ml-auto" (click)="edit(todo._id)"> Edit </button>
+            <button mat-raised-button color="warn" class="ml-2" (click)="delete(todo._id)"> Delete </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

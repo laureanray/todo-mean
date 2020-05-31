@@ -1,5 +1,11 @@
-<h1 mat-dialog-title>Dialog with elements</h1>
-<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
+<h1 mat-dialog-title>Add todo </h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>Add Todo</mat-label>
+    <input (keyup)="keyup($event)" [(ngModel)]="todoText" matInput placeholder="Placeholder">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="mb-1">
+  <button mat-button mat-dialog-close class="ml-auto">Close</button>
+  <button mat-raised-button color="primary" [disabled]="disabled || isAdding" (click)="add()"> {{ isAdding ? 'Adding..' : 'Add' }} </button>
 </div>

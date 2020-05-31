@@ -1,1 +1,11 @@
-<p>edit-todo-modal works!</p>
+<h1 mat-dialog-title>Edit todo </h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>Edit Todo</mat-label>
+    <input (keyup)="keyup($event)" [(ngModel)]="todoText" matInput placeholder="Placeholder">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="mb-1">
+  <button mat-button mat-dialog-close class="ml-auto">Close</button>
+  <button mat-raised-button color="primary" [disabled]="disabled || isSaving" (click)="save()"> {{ isSaving ? 'Saving..' : 'Save' }} </button>
+</div>
