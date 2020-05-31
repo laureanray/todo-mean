@@ -1,6 +1,6 @@
 # Todo List
 
-This is a sample project which contains a server which serves as a REST API and an Angular frontend to demonstrate
+This is a sample project which contains a server that serves as a REST API and an Angular frontend to demonstrate
 usage of the API.
 
 ## Requirements
