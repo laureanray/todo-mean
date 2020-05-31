@@ -9,14 +9,16 @@ usage of the API.
 **MongoDB**
 ## Installing and Running
 
-Clone this repository then install all the npm packages for both frontend and the backend.
+Clone this repository then install all the npm packages.
+
+#### Installing
 
 Run `npm install` in the **root** of the project for the installing the dependencies of the frontend.
 
 Move into the server directory `cd server` and run `npm install` in the **server** directory of the project to install the dependencies of the backend.
 
 
-### Starting 
+#### Running 
 Run `npm run start` from the **root** of the project. It should take a while for Angular to build please be patient during this time.
 
 If for some reason this doesn't work try running the frontend and backend separately by running `npm run serve` in the **root** of the project and then
@@ -27,6 +29,8 @@ run `npm run serve` in the **server** directory. For more information please che
 Go to [Web App](http://localhost:4200/) or type in `http://localhost:4200` in your browser.
 
 #### Api Endpoints
+You can try this by using cURL, Postman, or Insomnia. (or other http client)
+
 `[GET] http://localhost:3000/todo` get all the todos
 
 `[GET] http://localhost:3000/todo/id` get the todo that matches id
